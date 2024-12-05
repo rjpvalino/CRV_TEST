@@ -5,55 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cell Range Velocity - Professional RF Engineering Solutions</title>
     <style>
+        /* Global Styles */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background: url('telecom-tower.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: #333;
+            overflow-x: hidden;
         }
+
+        /* Header Styles */
         header {
-            background-color: #004aad;
+            background-color: rgba(0, 74, 173, 0.9); /* Darker overlay for better contrast */
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
         header img {
-            max-width: 250px; /* Increased logo size */
+            max-width: 200px;
             margin-bottom: 20px;
         }
-        header p {
-            font-size: 1.2rem;
+        header h1 {
+            font-size: 3rem; /* Larger title */
+            margin: 10px 0;
         }
+        header p {
+            font-size: 1.3rem;
+            margin-top: 10px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #003478;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #ffd700;
+            color: #003478;
+            text-decoration: underline;
+        }
+
+        /* Main Content Styles */
         main {
             padding: 40px 20px;
             max-width: 1200px;
             margin: auto;
+            z-index: 10;
         }
         .section {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
-        .section h2 {
-            font-size: 2rem;
-            color: #004aad;
-            margin-bottom: 10px;
+
+        /* Enhanced About Us Section */
+        .section.about {
+            background-color: rgba(0, 74, 173, 0.8);
+            color: white;
+            padding: 50px 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.5s ease;
         }
-        .section p {
-            line-height: 1.6;
+        .section.about h2 {
+            font-size: 2.8rem;
+            color: #ffd700;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .section.about p {
+            line-height: 1.8;
+            font-size: 1.3rem;
             margin-bottom: 20px;
         }
+
+        /* Services Styles */
         .services ul {
             list-style: none;
             padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
         .services ul li {
             background-color: #e8f0fc;
-            padding: 15px;
-            margin: 10px 0;
+            padding: 20px;
             border-left: 5px solid #004aad;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
-        footer {
+        .services ul li:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Call to Action */
+        .cta {
+            text-align: center;
+            margin: 60px 0;
+        }
+        .cta a {
             background-color: #004aad;
+            color: white;
+            padding: 18px 35px;
+            text-decoration: none;
+            font-size: 1.3rem;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .cta a:hover {
+            background-color: #003478;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(0, 74, 173, 0.9);
             color: white;
             text-align: center;
             padding: 20px;
@@ -66,27 +148,42 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Hover Animations */
+        .section.about:hover {
+            background-color: rgba(0, 74, 173, 1); /* Darken on hover */
+        }
+
     </style>
 </head>
 <body>
     <header>
         <img src="CRV.jpg" alt="Cell Range Velocity Logo">
-        <p>Cell Range Velocity LLC - RF Engineering Solutions</p>
+        <h1>Cell Range Velocity LLC</h1>
+        <p>Professional RF Engineering Solutions</p>
     </header>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
     <main>
-        <section class="section about">
+        <section class="section about" id="about">
             <h2>About Us</h2>
             <p>Cell Range Velocity LLC is a trusted offshoring partner providing expert RF engineering services to companies in the United States. We leverage our skilled workforce to deliver cost-effective and high-quality solutions tailored to meet your specific business needs.</p>
             <p>Our commitment to excellence ensures seamless collaboration and top-tier support for your projects.</p>
         </section>
-        <section class="section services">
+        <section class="section services" id="services">
             <h2>Our Services</h2>
             <ul>
-                <li>RF Network Design</li>
-                <li>RF Optimization</li>
-                <li>Remote Network Monitoring and Management</li>
-                <li>Custom RF Engineering Solutions</li>
+                <li><strong>RF Network Design:</strong> Tailored designs for optimal performance.</li>
+                <li><strong>RF Optimization:</strong> Maximizing network efficiency and coverage.</li>
+                <li><strong>Remote Network Monitoring:</strong> Continuous management for uptime assurance.</li>
+                <li><strong>Custom RF Solutions:</strong> Unique approaches for complex needs.</li>
             </ul>
+        </section>
+        <section class="cta">
+            <a href="mailto:info@cellrangevelocity.com">Contact Us Today</a>
         </section>
     </main>
     <footer>
